@@ -45,7 +45,6 @@ class Base {
 		$request->setTemplateCode( $data['code'] );
 		/*目标手机号*/
 		$request->setRecNum( $data['mobile'] );
-		print_r($data);
 		$request->setParamString( json_encode( $data['vars'], JSON_UNESCAPED_UNICODE ) );
 //		$vars = [
 //			'code'    => '9999',
