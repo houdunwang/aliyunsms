@@ -10,8 +10,6 @@
 
 namespace houdunwang\aliyunsms;
 
-
-require_once(__DIR__.'/build/mns-autoloader.php');
 use AliyunMNS\Client;
 use AliyunMNS\Topic;
 use AliyunMNS\Constants;
@@ -64,9 +62,9 @@ class Base
             $res = $topic->publishMessage($request);
 
             return [
-                'errcode' => 0,
+                'errcode'   => 0,
                 'messageId' => $res->getMessageId(),
-                'res'     => $res,
+                'res'       => $res,
             ];
         } catch (MnsException $e) {
             return [

@@ -28,7 +28,9 @@
     "phpunit/phpunit": "^6.1"
   },
   "autoload": {
-    "files": [],
+    "files": [
+      "src/build/mns-autoloader.php"
+    ],
     "psr-4": {
       "houdunwang\\aliyunsms\\": "src"
     }
