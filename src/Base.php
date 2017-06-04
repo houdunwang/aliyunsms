@@ -28,8 +28,7 @@ class Base
         /**
          * Step 1. 初始化Client
          */
-        $this->endPoint
-                         = Config::get('aliyunsms.endPoint');
+        $this->endPoint  = Config::get('aliyunsms.endPoint');
         $this->accessId  = Config::get('aliyunsms.accessId');
         $this->accessKey = Config::get('aliyunsms.accessKey');
         $this->client    = new Client($this->endPoint, $this->accessId,
@@ -43,8 +42,7 @@ class Base
          * Step 3. 生成SMS消息属性
          */
         // 3.1 设置发送短信的签名（SMSSignName）和模板（SMSTemplateCode）
-        $batchSmsAttributes = new BatchSmsAttributes($data['sign'],
-            $data['template']);
+        $batchSmsAttributes = new BatchSmsAttributes($data['sign'], $data['template']);
         // 3.2 （如果在短信模板中定义了参数）指定短信模板中对应参数的值
         $batchSmsAttributes->addReceiver($data['mobile'], $data['vars']);
         $messageAttributes = new MessageAttributes([$batchSmsAttributes]);
@@ -74,6 +72,3 @@ class Base
         }
     }
 }
-
-//$instance = new PublishBatchSMSMessageDemo();
-//$instance->run();
