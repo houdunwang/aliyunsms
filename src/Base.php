@@ -11,18 +11,27 @@
 namespace houdunwang\aliyunsms;
 
 use AliyunMNS\Client;
-use AliyunMNS\Topic;
-use AliyunMNS\Constants;
-use AliyunMNS\Model\MailAttributes;
-use AliyunMNS\Model\SmsAttributes;
 use AliyunMNS\Model\BatchSmsAttributes;
 use AliyunMNS\Model\MessageAttributes;
 use AliyunMNS\Exception\MnsException;
 use AliyunMNS\Requests\PublishMessageRequest;
 use houdunwang\config\Config;
 
+/**
+ * 阿里短消息
+ * Class Base
+ *
+ * @package houdunwang\aliyunsms
+ */
 class Base
 {
+    /**
+     * 发送短信
+     *
+     * @param array $data
+     *
+     * @return array
+     */
     public function send(array $data)
     {
         /**

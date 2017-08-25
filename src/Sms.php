@@ -12,20 +12,24 @@ namespace houdunwang\aliyunsms;
 
 class Sms
 {
-    protected $link;
+    protected static $link;
+
+    public static function single()
+    {
+        if ( ! self::$link) {
+            self::$link = new Base();
+        }
+
+        return self::$link;
+    }
 
     public function __call($method, $params)
     {
-        if (is_null($this->link)) {
-            $this->link = new Base();
-        }
-        if (method_exists($this->link, $method)) {
-            return call_user_func_array([$this->link, $method], $params);
-        }
+        return call_user_func_array([self::single(), $method], $params);
     }
 
     public static function __callStatic($name, $arguments)
     {
-        return call_user_func_array([new static(), $name], $arguments);
+        return call_user_func_array([self::single(), $name], $arguments);
     }
 }

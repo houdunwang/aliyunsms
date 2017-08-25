@@ -27,7 +27,7 @@ class MnsTest extends TestCase
             'sign'     => '后盾网',
             'template' => 'SMS_12840363',
             'mobile'   => \houdunwang\config\Config::get('aliyunsms.mobile'),
-            'vars'     => ["code" => "9999", "product" => "hdphp@@"],
+            'vars'     => ["code" => "9999", "product" => " 后盾人 "],
         ];
         $s    = Sms::send($data);
         $this->assertEquals(0, $s['errcode']);
