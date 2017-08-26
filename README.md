@@ -2,14 +2,14 @@
 使用阿里云短信平台发送短信，请先在阿里云开通短信服务后使用。
 
 [TOC]
-##开始使用
+## 开始使用
 安装组件 使用 composer 命令进行安装或下载源代码使用。
 
 ```
 composer require houdunwang/aliyunsms
 ```
 
-##环境配置
+## 环境配置
 ```
 \houdunwang\config\Config::set( 'aliyunsms',[
     /*
@@ -41,7 +41,8 @@ composer require houdunwang/aliyunsms
     'topic'  => 'sms.topic-cn-hangzhou'
 ]);
 ```
-##发送短信
+
+## 发送短信
 ```
 $data = [
     //短信签名
