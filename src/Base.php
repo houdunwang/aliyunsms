@@ -37,11 +37,10 @@ class Base
         /**
          * Step 1. 初始化Client
          */
+        $this->accessId  = Config::get('aliyun.accessId');
+        $this->accessKey = Config::get('aliyun.accessKey');
         $this->endPoint  = Config::get('aliyunsms.endPoint');
-        $this->accessId  = Config::get('aliyunsms.accessId');
-        $this->accessKey = Config::get('aliyunsms.accessKey');
-        $this->client    = new Client($this->endPoint, $this->accessId,
-            $this->accessKey);
+        $this->client    = new Client($this->endPoint, $this->accessId, $this->accessKey);
         /**
          * Step 2. 获取主题引用
          */

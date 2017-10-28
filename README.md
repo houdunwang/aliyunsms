@@ -11,13 +11,7 @@ composer require houdunwang/aliyunsms
 
 ##环境配置
 ```
-\houdunwang\config\Config::set( 'aliyunsms',[
-    /*
-    |--------------------------------------------------------------------------
-    | 访问MNS的接入地址，登陆MNS控制台 单击右上角 获取Endpoint 查看
-    */
-    'endPoint'       => 'https://297600.mns.cn-hangzhou.aliyuncs.com/',
-
+\houdunwang\config\Config::set( 'aliyun',[
     /*
     |--------------------------------------------------------------------------
     | 如果使用主账号访问，登陆阿里云 AccessKey 管理页面创建、查看
@@ -31,7 +25,13 @@ composer require houdunwang/aliyunsms
     | 如果使用子账号访问，请登录阿里云访问控制控制台查看
     */
     'accessKey'  => '',
-
+]);
+\houdunwang\config\Config::set( 'aliyunsms',[
+    /*
+    |--------------------------------------------------------------------------
+    | 访问MNS的接入地址，登陆MNS控制台 单击右上角 获取Endpoint 查看
+    */
+    'endPoint'       => 'https://297600.mns.cn-hangzhou.aliyuncs.com/',
     /*
     |--------------------------------------------------------------------------
     | 短信专用主题
