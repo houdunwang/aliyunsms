@@ -1,4 +1,4 @@
-<?php
+<?php namespace houdunwang\aliyunsms;
 /** .-------------------------------------------------------------------
  * |  Software: [HDCMS framework]
  * |      Site: www.hdcms.com
@@ -7,8 +7,6 @@
  * |    WeChat: aihoudun
  * | Copyright (c) 2012-2019, www.houdunwang.com. All Rights Reserved.
  * '-------------------------------------------------------------------*/
-
-namespace houdunwang\aliyunsms;
 
 use houdunwang\framework\build\Provider;
 
